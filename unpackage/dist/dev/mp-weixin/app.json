@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/completed/completed",
+    "pages/tabbar/calendar/calendar",
+    "pages/tabbar/person/person",
+    "pages/function/listDetail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "ToDoList",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "borderStyle": "white",
+    "selectedColor": "#d06769",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "iconPath": "./static/tabbar/preList.png",
+        "selectedIconPath": "./static/tabbar/lastList.png",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/tabbar/completed/completed",
+        "iconPath": "./static/tabbar/preCompleted.png",
+        "selectedIconPath": "./static/tabbar/lastCompleted.png",
+        "text": "已完成"
+      },
+      {
+        "pagePath": "pages/tabbar/calendar/calendar",
+        "iconPath": "./static/tabbar/preCalendar.png",
+        "selectedIconPath": "./static/tabbar/lastCalendar.png",
+        "text": "日历"
+      },
+      {
+        "pagePath": "pages/tabbar/person/person",
+        "iconPath": "./static/tabbar/prePerson.png",
+        "selectedIconPath": "./static/tabbar/lastPerson.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

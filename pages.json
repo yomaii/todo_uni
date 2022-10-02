@@ -1,4 +1,7 @@
 {
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 
 		{
@@ -21,7 +24,7 @@
         }
         ,{
             "path" : "pages/tabbar/calendar/calendar",
-            "style" :                                                                                    
+             "style" :                                                                                    
             {
                 "navigationBarTitleText": "日历",
                 "enablePullDownRefresh": false
@@ -37,6 +40,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/function/listDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "列表详情页",
+                "enablePullDownRefresh": false
+            }
+        }
     ],
 
 	"globalStyle": {
@@ -46,9 +57,9 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "ToDoList",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"backgroundColor": "#eeeeee",
 		"app-plus": {
-			"background": "#efeff4"
+			"background": "#ffffff"
 		}
 	},
 	"tabBar": {
