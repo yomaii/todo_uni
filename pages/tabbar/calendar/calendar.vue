@@ -1,6 +1,6 @@
 <template>
 	<view>
-	日历页面
+	日历
 	</view>
 </template>
 
@@ -8,7 +8,8 @@
 	export default {
 		data() {
 			return {
-				
+				 
+				 
 			}
 		},
 		methods: {

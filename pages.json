@@ -64,8 +64,9 @@
 			{
 				"pagePath": "pages/tabbar/completed/completed",
 				"iconPath": "./static/tabbar/preCompleted.png",
-				"selectedIconPath": "./static/tabbar/lastCompleted.png",
+				"selectedIconPath": "./static/tabbar/lastCompleted.png", 
 				"text": "已完成"
+				
 			},
 			{
 

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		已完成页面
+		已完成
 	</view>
 </template>
 
