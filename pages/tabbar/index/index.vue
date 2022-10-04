@@ -1,5 +1,6 @@
 <template>
 	<view class="ListContainer">
+
 		<u-sticky bgColor="#f8f8f8">
 
 			<!-- 添加待办 -->
@@ -33,14 +34,17 @@
 			</u-list-item>
 		</u-list>
 
+
 	</view>
 </template>
 
 <script>
+	
 	export default {
 
 		data() {
 			return {
+
 				// 添加框
 				value: '',
 				password: '',
@@ -244,6 +248,7 @@
 			this.loadmore()
 		},
 		methods: {
+
 			// 添加框事件
 			input(e) {
 				console.log('输入内容：', e);
@@ -343,3 +348,4 @@
 		// background: url(@/static/index/addBtn.png) no-repeat fixed center;	
 	}
 </style>
+

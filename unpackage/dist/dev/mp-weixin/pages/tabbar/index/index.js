@@ -203,11 +203,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var _default =
+
 {
 
   data: function data() {
     return {
+
       // 添加框
       value: '',
       password: '',
@@ -411,6 +415,7 @@ var _default =
     this.loadmore();
   },
   methods: {
+
     // 添加框事件
     input: function input(e) {
       console.log('输入内容：', e);
