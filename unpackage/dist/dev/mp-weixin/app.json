@@ -4,7 +4,7 @@
     "pages/tabbar/completed/completed",
     "pages/tabbar/calendar/calendar",
     "pages/tabbar/person/person",
-    "pages/function/listDetail"
+    "pages/function/addListDetail/addListDetail"
   ],
   "subPackages": [],
   "window": {

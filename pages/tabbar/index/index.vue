@@ -23,11 +23,15 @@
 		</u-sticky>
 		<!-- 列表 -->
 		<u-list @scrolltolower="scrolltolower">
-			<u-list-item v-for="(item, index) in indexList" :key="index">
+			<!-- 判断是否没有list，没有显示图片-->
+			<u-empty v-if="indexList.length==0"
+			        mode="list"
+			        icon="http://cdn.uviewui.com/uview/empty/list.png"
+			>	</u-empty>
+			<u-list-item v-else v-for="(item, index) in indexList" :key="index">
 				<view class="itemCell" v-if="item.category==currentCategory">
 					<view class="checkBox" @click="checked(item)">
-						<span class="circle"
-							:style="{'color':item.checked==true?'#cb2d01':'#ffffff','font-size':item.checked==true?'30rpx':'10rpx'}">√</span>
+			<span class="circle" :style="{'color':item.checked==true?'#cb2d01':'#ffffff','font-size':item.checked==true?'30rpx':'10rpx'}">√</span>
 					</view>
 					{{item.title}}
 				</view>
@@ -44,10 +48,8 @@
 
 		data() {
 			return {
-
 				// 添加框
 				value: '',
-				password: '',
 				placeholderStyle: "color:#2979FF;font-size:14px",
 				styles: {
 					color: '#2979FF',
@@ -70,48 +72,7 @@
 				current: 0,
 				currentCategory: "",
 				// 列表
-				indexList: [{
-						id: 1,
-						checked: true,
-						title: "彭厨",
-						category: "普通"
-					},
-					{
-						id: 2,
-						checked: false,
-						title: "牛火",
-						category: "公司"
-					},
-					{
-						id: 3,
-						checked: false,
-						title: "酸菜鱼",
-						category: "普通"
-					},
-					{
-						id: 4,
-						checked: true,
-						title: "京明度假村",
-						category: "学校"
-					},
-					{
-						id: 5,
-						checked: false,
-						title: "早茶belike",
-						category: "普通"
-					},
-					{
-						id: 6,
-						checked: true,
-						title: "本岛粥城",
-						category: "家庭"
-					},
-					{
-						id: 7,
-						checked: true,
-						title: "烤肉",
-						category: "普通"
-					},
+				indexList: [
 					{
 						id: 1,
 						checked: true,
@@ -154,121 +115,27 @@
 						title: "烤肉",
 						category: "普通"
 					},
-					{
-						id: 1,
-						checked: true,
-						title: "彭厨",
-						category: "普通"
-					},
-					{
-						id: 2,
-						checked: false,
-						title: "牛火",
-						category: "公司"
-					},
-					{
-						id: 3,
-						checked: false,
-						title: "酸菜鱼",
-						category: "普通"
-					},
-					{
-						id: 4,
-						checked: true,
-						title: "京明度假村",
-						category: "学校"
-					},
-					{
-						id: 5,
-						checked: false,
-						title: "早茶belike",
-						category: "普通"
-					},
-					{
-						id: 6,
-						checked: true,
-						title: "本岛粥城",
-						category: "家庭"
-					},
-					{
-						id: 7,
-						checked: true,
-						title: "烤肉",
-						category: "普通"
-					},
-					{
-						id: 1,
-						checked: true,
-						title: "彭厨",
-						category: "普通"
-					},
-					{
-						id: 2,
-						checked: false,
-						title: "牛火",
-						category: "公司"
-					},
-					{
-						id: 3,
-						checked: false,
-						title: "酸菜鱼",
-						category: "普通"
-					},
-					{
-						id: 4,
-						checked: true,
-						title: "京明度假村",
-						category: "学校"
-					},
-					{
-						id: 5,
-						checked: false,
-						title: "早茶belike",
-						category: "普通"
-					},
-					{
-						id: 6,
-						checked: true,
-						title: "本岛粥城",
-						category: "家庭"
-					},
-					{
-						id: 7,
-						checked: true,
-						title: "烤肉",
-						category: "普通"
-					},
-
-
 				],
 
 			}
 		},
 		onLoad() {
-			this.loadmore()
+			// this.loadmore()
 		},
 		methods: {
-
 			// 添加框事件
 			input(e) {
 				console.log('输入内容：', e);
 			},
 			iconClick(type) {
-				uni.showToast({
-					title: `点击了${type==='prefix'?'左侧':'右侧'}的图标`,
-					icon: 'none'
-				})
-			},
-
-			scrolltolower() {
-				this.loadmore()
-			},
-			loadmore() {
-				for (let i = 0; i < 30; i++) {
-					this.indexList.push({
-						url: this.urls[uni.$u.random(0, this.urls.length - 1)]
-					})
-				}
+			if(type==='suffix'){
+				// 跳转到添加示例详情页面
+				uni.navigateTo({
+				// url: '/pages/function/fun-order/order?id='+id,
+				url:"/pages/function/addListDetail/addListDetail",
+							});
+				
+			}
 			},
 			change(index) {
 				this.current = index.index
@@ -294,9 +161,6 @@
 		width: 97%;
 		background-color: #ffffff;
 		margin: 7rpx 10rpx;
-
-		// padding-left: 30rpx;
-
 		.checkBox {
 			width: 20rpx;
 			display: inline-block;
@@ -304,13 +168,12 @@
 			margin-right: 20rpx;
 			height: 20rpx;
 			border: 1px solid black;
-
 			.circle {
 				width: 13rpx;
 				height: 13rpx;
 				line-height: 13rpx;
 				margin: 4rpx;
-				border-radius: 10rpx;
+				border-radius:10rpx;
 				font-weight: 900;
 				display: block;
 			}
@@ -321,7 +184,6 @@
 		height: 60rpx;
 		width: 100rpx;
 	}
-
 	.addBox {
 		height: 60rpx;
 		width: 97%;
@@ -334,18 +196,6 @@
 
 	}
 
-	.iconBtn {
-		height: 50rpx;
-		width: 50rpx;
-		line-height: 60rpx;
-		// background-color: red;
-		background-image: url(@/static/index/addBtn.png);
-		background-repeat: repeat;
-		background-position: center;
-		background-size: contain;
-		margin-left: 20rpx;
-		margin-top: 6rpx;
-		// background: url(@/static/index/addBtn.png) no-repeat fixed center;	
-	}
+	
 </style>
 

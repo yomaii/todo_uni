@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "列表详情页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-easyinput": "/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput",
+    "uni-combox": "/uni_modules/uni-combox/components/uni-combox/uni-combox",
+    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
+    "u--textarea": "/node-modules/uview-ui/components/u--textarea/u--textarea"
+  }
+}
