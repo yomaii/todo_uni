@@ -4,16 +4,26 @@
     "sass-loader": "^10.3.1"
   },
   "dependencies": {
+    "eslint": "^8.24.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "uview-ui": "^2.0.31"
   },
   "name": "todolist",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "lint-staged": {
+    "**/*.{js,jsx,vue,cjs,mjs}": "eslint --ext .vue,.js,.jsx,.cjs,.mjs --fix",
+    "**/*.{js,jsx,md,json,vue,cjs,mjs}": "prettier --write"
+  }
 }
