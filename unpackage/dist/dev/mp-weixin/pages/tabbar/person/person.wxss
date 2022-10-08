@@ -1,0 +1,40 @@
+
+.card {
+	margin: auto;
+	width: 95vw;
+	height: 300rpx;
+	background-color: #fff;
+	border-radius: 10px;
+	display: flex;
+	margin-top: 2.5vw;
+	padding: 20rpx;
+	box-sizing: border-box;
+}
+.user {
+	margin: auto;
+	width: 150rpx;
+	height: 150rpx;
+	/* overflow: hidden; */
+	border-radius: 50%;
+	text-align: center;
+}
+.avatar {
+	width: 150rpx;
+	height: 150rpx;
+}
+.name {}
+.classification {
+	height: auto;
+	flex-direction: column;
+}
+.title {
+	flex: 1;
+}
+.content {
+	flex: 5;
+}
+.tag{
+	float: left;
+	margin-left: 10rpx;
+}
+

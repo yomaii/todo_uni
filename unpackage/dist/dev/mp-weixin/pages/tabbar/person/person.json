@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "个人",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-tag": "/uni_modules/uni-tag/components/uni-tag/uni-tag"
+  }
 }
