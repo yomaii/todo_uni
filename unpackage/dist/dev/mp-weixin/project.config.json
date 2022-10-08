@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.26.1",
+  "libVersion": "2.26.2",
   "appid": "touristappid",
   "projectname": "todo_uni",
   "condition": {},
