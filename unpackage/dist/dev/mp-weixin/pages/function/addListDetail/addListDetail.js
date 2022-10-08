@@ -98,6 +98,7 @@ var components
 try {
   components = {
     uniEasyinput: function() {
+<<<<<<< Updated upstream
       return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 191))
     },
     uniCombox: function() {
@@ -108,6 +109,18 @@ try {
     },
     "u-Textarea": function() {
       return Promise.all(/*! import() | node-modules/uview-ui/components/u--textarea/u--textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u--textarea/u--textarea")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u--textarea/u--textarea.vue */ 288))
+=======
+      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 190))
+    },
+    uniCombox: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-combox/components/uni-combox/uni-combox */ "uni_modules/uni-combox/components/uni-combox/uni-combox").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-combox/components/uni-combox/uni-combox.vue */ 261))
+    },
+    uniDatetimePicker: function() {
+      return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 268))
+    },
+    "u-Textarea": function() {
+      return Promise.all(/*! import() | node-modules/uview-ui/components/u--textarea/u--textarea */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u--textarea/u--textarea")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u--textarea/u--textarea.vue */ 279))
+>>>>>>> Stashed changes
     }
   }
 } catch (e) {

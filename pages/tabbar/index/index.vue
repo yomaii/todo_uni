@@ -72,7 +72,17 @@
 
 			}
 		},
+<<<<<<< Updated upstream
 		onLoad() {},
+=======
+		onLoad() {
+			// this.loadmore()
+			uni.navigateTo({
+			// url: '/pages/function/fun-order/order?id='+id,
+			url:"/pages/function/login/login",
+						});
+		},
+>>>>>>> Stashed changes
 		methods: {
 			//从Storage取数据
 			getInfo(){

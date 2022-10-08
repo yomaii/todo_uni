@@ -18398,8 +18398,12 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* 184 */,
 /* 185 */,
 /* 186 */,
+<<<<<<< Updated upstream
 /* 187 */,
 /* 188 */
+=======
+/* 187 */
+>>>>>>> Stashed changes
 /*!**********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-sticky/props.js ***!
   \**********************************************************************************************/
@@ -18447,6 +18451,10 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 188 */,
+>>>>>>> Stashed changes
 /* 189 */,
 /* 190 */,
 /* 191 */,
@@ -18460,8 +18468,12 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* 199 */,
 /* 200 */,
 /* 201 */,
+<<<<<<< Updated upstream
 /* 202 */,
 /* 203 */
+=======
+/* 202 */
+>>>>>>> Stashed changes
 /*!********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-tabs/props.js ***!
   \********************************************************************************************/
@@ -18533,14 +18545,22 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 203 */,
+>>>>>>> Stashed changes
 /* 204 */,
 /* 205 */,
 /* 206 */,
 /* 207 */,
 /* 208 */,
 /* 209 */,
+<<<<<<< Updated upstream
 /* 210 */,
 /* 211 */
+=======
+/* 210 */
+>>>>>>> Stashed changes
 /*!********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-list/props.js ***!
   \********************************************************************************************/
@@ -18625,14 +18645,22 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 211 */,
+>>>>>>> Stashed changes
 /* 212 */,
 /* 213 */,
 /* 214 */,
 /* 215 */,
 /* 216 */,
 /* 217 */,
+<<<<<<< Updated upstream
 /* 218 */,
 /* 219 */
+=======
+/* 218 */
+>>>>>>> Stashed changes
 /*!*********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-empty/props.js ***!
   \*********************************************************************************************/
@@ -18699,14 +18727,22 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 219 */,
+>>>>>>> Stashed changes
 /* 220 */,
 /* 221 */,
 /* 222 */,
 /* 223 */,
 /* 224 */,
 /* 225 */,
+<<<<<<< Updated upstream
 /* 226 */,
 /* 227 */
+=======
+/* 226 */
+>>>>>>> Stashed changes
 /*!*************************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-list-item/props.js ***!
   \*************************************************************************************************/
@@ -18723,21 +18759,33 @@ module.exports = JSON.parse("[{\"id\":0,\"title\":\"写报告\",\"finished\":fal
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 227 */,
+>>>>>>> Stashed changes
 /* 228 */,
 /* 229 */,
 /* 230 */,
 /* 231 */,
 /* 232 */,
 /* 233 */,
+<<<<<<< Updated upstream
 /* 234 */,
 /* 235 */
 /*!***********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \***********************************************************************************************/
+=======
+/* 234 */
+/*!****************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/util.js ***!
+  \****************************************************************************************************/
+>>>>>>> Stashed changes
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< Updated upstream
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
   "id": "2852637",
   "name": "uniui图标库",
@@ -18751,6 +18799,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "font_class": "color",
     "unicode": "e6cf",
     "unicode_decimal": 59087 },
+=======
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 235));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+
+Calendar = /*#__PURE__*/function () {
+  function Calendar()
+>>>>>>> Stashed changes
 
   {
     "icon_id": "25027048",
@@ -19023,12 +19077,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e651",
     "unicode_decimal": 58961 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24923335",
     "name": "eye-filled",
     "font_class": "eye-filled",
     "unicode": "e66a",
     "unicode_decimal": 58986 },
+=======
+/***/ }),
+/* 235 */
+/*!********************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/calendar.js ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24923336",
@@ -19303,6 +19367,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e67f",
     "unicode_decimal": 59007 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24881275",
     "name": "qq",
@@ -19323,6 +19388,32 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "font_class": "pyq",
     "unicode": "e682",
     "unicode_decimal": 59010 },
+=======
+/***/ }),
+/* 236 */
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/i18n/index.js ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 237));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 238));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 239));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
+
+/***/ }),
+/* 237 */
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/i18n/en.json ***!
+  \*********************************************************************************************************/
+/*! exports provided: uni-calender.ok, uni-calender.cancel, uni-calender.today, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.SUN, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24881279",
@@ -19331,12 +19422,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e684",
     "unicode_decimal": 59012 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24881280",
     "name": "trash-filled",
     "font_class": "trash-filled",
     "unicode": "e685",
     "unicode_decimal": 59013 },
+=======
+/***/ }),
+/* 238 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/i18n/zh-Hans.json ***!
+  \**************************************************************************************************************/
+/*! exports provided: uni-calender.ok, uni-calender.cancel, uni-calender.today, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24881281",
@@ -19345,12 +19446,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e686",
     "unicode_decimal": 59014 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24881282",
     "name": "trash",
     "font_class": "trash",
     "unicode": "e687",
     "unicode_decimal": 59015 },
+=======
+/***/ }),
+/* 239 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-calendar/components/uni-calendar/i18n/zh-Hant.json ***!
+  \**************************************************************************************************************/
+/*! exports provided: uni-calender.ok, uni-calender.cancel, uni-calender.today, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24881284",
@@ -19359,12 +19470,70 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e689",
     "unicode_decimal": 59017 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24881285",
     "name": "spinner-cycle",
     "font_class": "spinner-cycle",
     "unicode": "e68a",
     "unicode_decimal": 59018 },
+=======
+/***/ }),
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */
+/*!***********************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-popup/components/uni-popup/popup.js ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+{
+  data: function data() {
+    return {};
+
+
+  },
+  created: function created() {
+    this.popup = this.getParent();
+  },
+  methods: {
+    /**
+              * 获取父元素实例
+              */
+    getParent: function getParent() {var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'uniPopup';
+      var parent = this.$parent;
+      var parentName = parent.$options.name;
+      while (parentName !== name) {
+        parent = parent.$parent;
+        if (!parent) return false;
+        parentName = parent.$options.name;
+      }
+      return parent;
+    } } };exports.default = _default;
+
+/***/ }),
+/* 255 */
+/*!****************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-popup/components/uni-popup/i18n/index.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24881286",
@@ -19373,12 +19542,83 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e68b",
     "unicode_decimal": 59019 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24881288",
     "name": "videocam",
     "font_class": "videocam",
     "unicode": "e68c",
     "unicode_decimal": 59020 },
+=======
+/***/ }),
+/* 256 */
+/*!***************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-popup/components/uni-popup/i18n/en.json ***!
+  \***************************************************************************************************/
+/*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-popup.cancel\":\"cancel\",\"uni-popup.ok\":\"ok\",\"uni-popup.placeholder\":\"pleace enter\",\"uni-popup.title\":\"Hint\",\"uni-popup.shareTitle\":\"Share to\"}");
+
+/***/ }),
+/* 257 */
+/*!********************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hans.json ***!
+  \********************************************************************************************************/
+/*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\"确定\",\"uni-popup.placeholder\":\"请输入\",\"uni-popup.title\":\"提示\",\"uni-popup.shareTitle\":\"分享到\"}");
+
+/***/ }),
+/* 258 */
+/*!********************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hant.json ***!
+  \********************************************************************************************************/
+/*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\"確定\",\"uni-popup.placeholder\":\"請輸入\",\"uni-popup.title\":\"提示\",\"uni-popup.shareTitle\":\"分享到\"}");
+
+/***/ }),
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 274));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 275));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 276));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
+
+/***/ }),
+/* 274 */
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
+  \***********************************************************************************************************************/
+/*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.SUN, uni-calender.confirm, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24881289",
@@ -19387,12 +19627,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e68d",
     "unicode_decimal": 59021 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24879601",
     "name": "help",
     "font_class": "help",
     "unicode": "e679",
     "unicode_decimal": 59001 },
+=======
+/***/ }),
+/* 275 */
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
+  \****************************************************************************************************************************/
+/*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24879602",
@@ -19401,12 +19651,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e67a",
     "unicode_decimal": 59002 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24879603",
     "name": "plusempty",
     "font_class": "plusempty",
     "unicode": "e67b",
     "unicode_decimal": 59003 },
+=======
+/***/ }),
+/* 276 */
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
+  \****************************************************************************************************************************/
+/*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
+/***/ (function(module) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24879604",
@@ -19415,12 +19675,29 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e67c",
     "unicode_decimal": 59004 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24879605",
     "name": "minus-filled",
     "font_class": "minus-filled",
     "unicode": "e67d",
     "unicode_decimal": 59005 },
+=======
+/***/ }),
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */
+/*!************************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-textarea/props.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24879606",
@@ -19576,12 +19853,27 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode": "e65c",
     "unicode_decimal": 58972 },
 
+<<<<<<< Updated upstream
   {
     "icon_id": "24855889",
     "name": "chat",
     "font_class": "chat",
     "unicode": "e65d",
     "unicode_decimal": 58973 },
+=======
+/***/ }),
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */
+/*!***********************************************************************************************!*\
+  !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> Stashed changes
 
   {
     "icon_id": "24855890",
@@ -21161,12 +21453,22 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 291 */,
+/* 292 */,
+/* 293 */,
+>>>>>>> Stashed changes
 /* 294 */,
 /* 295 */,
 /* 296 */,
 /* 297 */,
+<<<<<<< Updated upstream
 /* 298 */,
 /* 299 */
+=======
+/* 298 */
+>>>>>>> Stashed changes
 /*!*********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-badge/props.js ***!
   \*********************************************************************************************/
@@ -21246,14 +21548,22 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 299 */,
+>>>>>>> Stashed changes
 /* 300 */,
 /* 301 */,
 /* 302 */,
 /* 303 */,
 /* 304 */,
 /* 305 */,
+<<<<<<< Updated upstream
 /* 306 */,
 /* 307 */
+=======
+/* 306 */
+>>>>>>> Stashed changes
 /*!********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-icon/icons.js ***!
   \********************************************************************************************/
@@ -21476,7 +21786,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   'uicon-en': "\uE692" };exports.default = _default;
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 308 */
+=======
+/* 307 */
+>>>>>>> Stashed changes
 /*!********************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/node_modules/uview-ui/components/u-icon/props.js ***!
   \********************************************************************************************/
@@ -21573,6 +21887,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 308 */,
+>>>>>>> Stashed changes
 /* 309 */,
 /* 310 */,
 /* 311 */,
@@ -21586,8 +21904,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 319 */,
 /* 320 */,
 /* 321 */,
+<<<<<<< Updated upstream
 /* 322 */,
 /* 323 */
+=======
+/* 322 */
+>>>>>>> Stashed changes
 /*!*******************************************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \*******************************************************************************************************************/
@@ -21726,12 +22048,20 @@ function createAnimation(option, _this) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
+<<<<<<< Updated upstream
+=======
+/* 323 */,
+>>>>>>> Stashed changes
 /* 324 */,
 /* 325 */,
 /* 326 */,
 /* 327 */,
+<<<<<<< Updated upstream
 /* 328 */,
 /* 329 */
+=======
+/* 328 */
+>>>>>>> Stashed changes
 /*!******************************************************************************************************************!*\
   !*** C:/Users/dwxstc/Desktop/终端/todo_uni/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
   \******************************************************************************************************************/

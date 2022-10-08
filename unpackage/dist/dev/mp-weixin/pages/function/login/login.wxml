@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 <view></view>
+=======
+<view><view><uni-easyinput vue-id="755ff621-1" prefixIcon="search" placeholder="左侧图标" value="{{value}}" data-event-opts="{{[['^iconClick',[['iconClick']]],['^input',[['__set_model',['','value','$event',[]]]]]]}}" bind:iconClick="__e" bind:input="__e" bind:__l="__l"></uni-easyinput></view><view><uni-easyinput bind:input="__e" vue-id="755ff621-2" type="password" placeholder="请输入密码" value="{{password}}" data-event-opts="{{[['^input',[['__set_model',['','password','$event',[]]]]]]}}" bind:__l="__l"></uni-easyinput></view></view>
+>>>>>>> Stashed changes
