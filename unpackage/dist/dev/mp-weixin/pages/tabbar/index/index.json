@@ -7,6 +7,7 @@
     "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
     "u-list": "/node-modules/uview-ui/components/u-list/u-list",
     "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
-    "u-list-item": "/node-modules/uview-ui/components/u-list-item/u-list-item"
+    "u-list-item": "/node-modules/uview-ui/components/u-list-item/u-list-item",
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons"
   }
 }
