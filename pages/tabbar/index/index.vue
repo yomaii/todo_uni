@@ -24,16 +24,22 @@
 		<!-- 列表 -->
 		<u-list @scrolltolower="scrolltolower">
 			<!-- 判断是否没有list，没有显示图片-->
-			<u-empty v-if="indexList.length==0"
-			        mode="list"
-			        icon="http://cdn.uviewui.com/uview/empty/list.png"
-			>	</u-empty>
+			<u-empty v-if="indexList.length==0" mode="list" icon="http://cdn.uviewui.com/uview/empty/list.png">
+			</u-empty>
 			<u-list-item v-else v-for="(item, index) in indexList" :key="index">
-				<view class="itemCell" v-if="item.category==currentCategory">
+				<view class="itemCell" v-if="item.type==currentCategory">
 					<view class="checkBox" @click="checked(item)">
-			<span class="circle" :style="{'color':item.checked==true?'#cb2d01':'#ffffff','font-size':item.checked==true?'30rpx':'10rpx'}">√</span>
+						<span class="circle"
+							:style="{'color':item.finished==true?'#cb2d01':'#ffffff','font-size':item.finished==true?'30rpx':'10rpx'}">√</span>
 					</view>
 					{{item.title}}
+
+					<!-- 时间 -->
+					<view class="time">{{item.date | formatDate}}</view>
+					<!-- 删除 -->
+					<view class="delete" @click="deleted(index)"><uni-icons type="trash-filled" size="20"></uni-icons>
+					
+</view>
 				</view>
 			</u-list-item>
 		</u-list>
@@ -43,7 +49,7 @@
 </template>
 
 <script>
-	
+	const listData =require('../../../data/list.json')
 	export default {
 
 		data() {
@@ -56,101 +62,130 @@
 					borderColor: '#2979FF'
 				},
 				// tab
-				list4: [{
-						name: '普通'
-					},
-					{
-						name: "公司"
-					},
-					{
-						name: "学校"
-					},
-					{
-						name: "家庭"
-					},
+				list4: [
+					// {type:"测试"}
 				],
 				current: 0,
 				currentCategory: "",
 				// 列表
-				indexList: [
-					{
-						id: 1,
-						checked: true,
-						title: "彭厨",
-						category: "普通"
-					},
-					{
-						id: 2,
-						checked: false,
-						title: "牛火",
-						category: "公司"
-					},
-					{
-						id: 3,
-						checked: false,
-						title: "酸菜鱼",
-						category: "普通"
-					},
-					{
-						id: 4,
-						checked: true,
-						title: "京明度假村",
-						category: "学校"
-					},
-					{
-						id: 5,
-						checked: false,
-						title: "早茶belike",
-						category: "普通"
-					},
-					{
-						id: 6,
-						checked: true,
-						title: "本岛粥城",
-						category: "家庭"
-					},
-					{
-						id: 7,
-						checked: true,
-						title: "烤肉",
-						category: "普通"
-					},
-				],
+				indexList: listData,
 
 			}
 		},
-		onLoad() {
-			// this.loadmore()
-		},
+		onLoad() {},
 		methods: {
+			//从Storage取数据
+			getInfo(){
+				uni.getStorage({     
+					key:'userInfo',
+					success(res) {
+						return res.data;
+					}
+				})
+			},
+			setInfo(){
+				if (this.getInfo()) {
+					return true
+				} else {
+					uni.setStorage({ //存入Storage
+						key: 'userInfo', //自己取个名字
+						data: listData,
+						success() {
+							console.log('userInfo储存成功');
+						}
+					})
+				}
+			},
+					
+			updateList(){
+				uni.setStorageSync('userInfo',this.indexList)
+			},
 			// 添加框事件
 			input(e) {
 				console.log('输入内容：', e);
 			},
 			iconClick(type) {
-			if(type==='suffix'){
-				// 跳转到添加示例详情页面
-				uni.navigateTo({
-				// url: '/pages/function/fun-order/order?id='+id,
-				url:"/pages/function/addListDetail/addListDetail",
-							});
-				
-			}
+				if (type === 'suffix') {
+					// 跳转到添加示例详情页面
+					uni.navigateTo({
+						// url: '/pages/function/fun-order/order?id='+id,
+						url: "/pages/function/addListDetail/addListDetail",
+					});
+
+				}
 			},
 			change(index) {
+				// console.log(index);
 				this.current = index.index
 				this.currentCategory = this.list4[this.current].name;
 			},
 			checked(item) {
-				let ret = JSON.parse(JSON.stringify(item))
+
+				// let ret = JSON.parse(JSON.stringify(item))
 				// item变为选中状态
-				item.checked = !item.checked;
+				item.finished = !item.finished;
+			},
+
+			// 获取类别
+			getType() {
+				let ret = JSON.parse(JSON.stringify(this.indexList))
+				// let arr=[]
+				// console.log(ret[1].type);
+				for (let i = 0; i < ret.length; i++) {
+					let obj = {}
+					// obj.id=ret[i].id
+					obj.name = ret[i].type
+					this.list4[i] = obj
+
+				}
+				let len = this.list4.length
+				for (let i = 0; i < len; i++) {
+					for (let j = i + 1; j < len; j++) {
+						if (this.list4[i].name === this.list4[j].name) {
+							this.list4.splice(j, 1)
+							len-- // 减少循环次数提高性能
+				   j-- // 保证j的值自加后不变
+						}
+					}
+				}
+				this.list4 = JSON.parse(JSON.stringify(this.list4))
+				console.log(this.list4);
+			},
+		// 删除
+		deleted(index){
+			this.indexList.splice(index,1)
+			this.updateList()
+			
+			
+		}
+		},
+		mounted() {
+
+			// console.log("第一个type"+this.list4[0].type)
+		},
+		onLoad() {
+			this.getType()
+			this.currentCategory = this.list4[0].name
+		},
+		created() {
+			this.setInfo()
+			},
+		filters: {
+			formatDate: function(value) {
+				var date = new Date();
+				//date.setTime(value);
+				var month = date.getMonth() + 1;
+				var hours = date.getHours();
+				if (hours < 10)
+					hours = "0" + hours;
+				var minutes = date.getMinutes();
+				if (minutes < 10)
+					minutes = "0" + minutes;
+				var time = date.getFullYear() + "-" + month + "-" + date.getDate();
+				return time;
 			}
 
 		},
-		mounted() {
-			this.currentCategory = this.list4[0].name
-		}
 	}
 </script>
 
@@ -161,6 +196,18 @@
 		width: 97%;
 		background-color: #ffffff;
 		margin: 7rpx 10rpx;
+		.delete{
+			display: inline-block;
+			float: right;
+			margin-right: 20rpx;
+		}
+		.time{
+			display: inline-block;
+margin-right: 20rpx;
+float: right;
+		}
+
+
 		.checkBox {
 			width: 20rpx;
 			display: inline-block;
@@ -168,12 +215,13 @@
 			margin-right: 20rpx;
 			height: 20rpx;
 			border: 1px solid black;
+
 			.circle {
 				width: 13rpx;
 				height: 13rpx;
 				line-height: 13rpx;
 				margin: 4rpx;
-				border-radius:10rpx;
+				border-radius: 10rpx;
 				font-weight: 900;
 				display: block;
 			}
@@ -184,6 +232,7 @@
 		height: 60rpx;
 		width: 100rpx;
 	}
+
 	.addBox {
 		height: 60rpx;
 		width: 97%;
@@ -195,7 +244,4 @@
 		// color:#fff;   
 
 	}
-
-	
 </style>
-

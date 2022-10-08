@@ -25,6 +25,7 @@
 .name {}
 .classification {
 	height: auto;
+	display: flex;
 	flex-direction: column;
 }
 .title {
@@ -33,8 +34,28 @@
 .content {
 	flex: 5;
 }
-.tag{
+.tag {
+	margin-top: 10rpx;
+	text-align: center;
 	float: left;
-	margin-left: 10rpx;
+	margin-left: 15rpx;
+	min-width: 20rpx;
+	border: 1px solid red;
+	color: red;
+	border-radius: 15px;
+	padding: 5rpx 15rpx;
+	font-weight: 500;
+}
+.logout{
+    height: auto;
+	text-align: center;
+	color: #fff;
+	background-color: #ff0000b8;
+	font-weight: 600;
+	padding: 30rpx;
+	box-sizing: border-box;
+}
+.logout text{
+	margin: auto;
 }
 

@@ -50,6 +50,15 @@
 		    }
 		}
         
+        ,{
+            "path" : "pages/function/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 
 	"globalStyle": {

@@ -32,6 +32,16 @@
   background-color: #ffffff;
   margin: 7rpx 10rpx;
 }
+.itemCell .delete {
+  display: inline-block;
+  float: right;
+  margin-right: 20rpx;
+}
+.itemCell .time {
+  display: inline-block;
+  margin-right: 20rpx;
+  float: right;
+}
 .itemCell .checkBox {
   width: 20rpx;
   display: inline-block;
