@@ -72,6 +72,7 @@
 
 			}
 		},
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 		onLoad() {},
 =======
@@ -83,6 +84,9 @@
 						});
 		},
 >>>>>>> Stashed changes
+=======
+		onLoad() {},
+>>>>>>> 8218dd6b4575bc2504f785abd6886c23350402c3
 		methods: {
 			//从Storage取数据
 			getInfo(){
