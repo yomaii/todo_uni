@@ -26,13 +26,13 @@
 					@confirm="dialogInputConfirm"></uni-popup-dialog>
 			</uni-popup>
 		</view>
-		<view class="card classification">
+	<!-- 	<view class="card classification">
 			<view class="title">计划</view>
 			<view class="content">
 				<view class="tag">单词</view>
 				<view class="tag">+</view>
 			</view>
-		</view>
+		</view> -->
         <view class="card logout" @click="logout"><text >退出登录</text></view>
 	</view>
 </template>
@@ -43,7 +43,7 @@
 			return {
 				avatar: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png',
 				user_name: 'wenxi',
-				group: ['测试类别', '学校', '饭局'],
+				group: ['测试类别', '公司'],
 			}
 		},
 		methods: {

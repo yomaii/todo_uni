@@ -102,7 +102,7 @@ export default {
     });
   },
 
- 
+
 
   methods: {
     //从Storage取数据
@@ -190,6 +190,12 @@ export default {
     // console.log("第一个type"+this.list4[0].type)
   },
   onLoad() {
+	uni.getStorage({
+	  key: "userInfo",
+	  success(res) {
+	   this.indexList = res.data
+	  },
+	});
 	uni.navigateTo({
 	  // url: '/pages/function/fun-order/order?id='+id,
 	  url: "/pages/function/login/login",

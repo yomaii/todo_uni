@@ -107,7 +107,8 @@
 					obj.describe=this.value1;
 					console.log(obj);
 					this.indexList.push(obj)
-					this.indexList=JSON.parse(this.insexList)
+					// this.indexList=JSON.parse(this.insexList)
+					// console.log(this.insexList);
 					uni.setStorageSync('userInfo',this.indexList)
 					this.returnLast()
 					console.log(this.indexList);

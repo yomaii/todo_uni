@@ -1,18 +1,18 @@
 <template>
 	<view>
 		<view class="addBox">
-			<uni-easyinput class="uni-mt-5 " prefixIcon="compose" suffixIcon="trash" v-model="value" @input="input"
-				placeholder="查找已完成事项..." @iconClick="iconClick"></uni-easyinput>
+		<!-- 	<uni-easyinput class="uni-mt-5 " prefixIcon="compose" suffixIcon="trash" v-model="value" @input="input"
+				placeholder="查找已完成事项..." @iconClick="iconClick"></uni-easyinput> -->
 
 		</view>
 		<view class="card">
 			<view class="list">
 				<view class="title">Done:</view>
 				<ul class="listItem">
-					<li v-for="(item, index) in indexList" :key="index">
+					<li v-for="(item, index) in indexList2" :key="index">
 						<view class="checkBox" @click="checked(item)">
 							<span class="circle"
-								:style="{'color':item.checked==true?'#cb2d01':'#ffffff','font-size':item.checked==true?'30rpx':'10rpx'}">√</span>
+								style="'color':'#cb2d01','font-size':'30rpx'">√</span>
 						</view>
 						{{item.title}}
 					</li>
@@ -27,54 +27,25 @@
 	export default {
 		data() {
 			return {
-				indexList: [{
-						id: 1,
-						checked: true,
-						title: "彭厨",
-						category: "普通"
-					},
-					{
-						id: 2,
-						checked: true,
-						title: "牛火",
-						category: "公司"
-					},
-					{
-						id: 3,
-						checked: true,
-						title: "酸菜鱼",
-						category: "普通"
-					},
-					{
-						id: 4,
-						checked: true,
-						title: "京明度假村",
-						category: "学校"
-					},
-					{
-						id: 5,
-						checked: true,
-						title: "早茶belike",
-						category: "普通"
-					},
-					{
-						id: 6,
-						checked: true,
-						title: "本岛粥城",
-						category: "家庭"
-					},
-					{
-						id: 7,
-						checked: true,
-						title: "烤肉",
-						category: "普通"
-					},
-				],
-			}
+				indexList: [],
+				indexList2:[]
+				}
+			
 		},
+	  
 		methods: {
-
-		}
+            
+		},
+	    onShow(){
+	    	this.indexList = uni.getStorageSync("userInfo");
+			
+			for(let i = 0;i<this.indexList.length;i++){
+				if(this.indexList[i].finished == true){
+					this.indexList2.push(this.indexList[i])
+					// this.indexList2[i]=this.indexList[i]
+				}
+			}
+	    }
 	}
 </script>
 

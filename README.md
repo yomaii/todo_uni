@@ -4,6 +4,11 @@ todo 待办清单是一个管理待办事项的小工具。可以快速添加待
 
 # 环境准备
 
+# 安装 npm install
+# 初始化项目：npm init -y
+# 配置uview框架：npm install uview-ui@2.0.31
+# 运行： npm run dev
+# 打包 npm run build
 # 编码规范
 
 使用 lint 和 prepare 来确保项目代码质量。

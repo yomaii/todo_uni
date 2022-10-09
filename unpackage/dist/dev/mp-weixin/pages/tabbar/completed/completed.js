@@ -95,29 +95,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
-try {
-  components = {
-    uniEasyinput: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 191))
-    }
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -155,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -184,52 +161,26 @@ var _default =
 {
   data: function data() {
     return {
-      indexList: [{
-        id: 1,
-        checked: true,
-        title: "彭厨",
-        category: "普通" },
-
-      {
-        id: 2,
-        checked: true,
-        title: "牛火",
-        category: "公司" },
-
-      {
-        id: 3,
-        checked: true,
-        title: "酸菜鱼",
-        category: "普通" },
-
-      {
-        id: 4,
-        checked: true,
-        title: "京明度假村",
-        category: "学校" },
-
-      {
-        id: 5,
-        checked: true,
-        title: "早茶belike",
-        category: "普通" },
-
-      {
-        id: 6,
-        checked: true,
-        title: "本岛粥城",
-        category: "家庭" },
-
-      {
-        id: 7,
-        checked: true,
-        title: "烤肉",
-        category: "普通" }] };
-
+      indexList: [],
+      indexList2: [] };
 
 
   },
-  methods: {} };exports.default = _default;
+
+  methods: {},
+
+
+  onShow: function onShow() {
+    this.indexList = uni.getStorageSync("userInfo");
+
+    for (var i = 0; i < this.indexList.length; i++) {
+      if (this.indexList[i].finished == true) {
+        this.indexList2.push(this.indexList[i]);
+        // this.indexList2[i]=this.indexList[i]
+      }
+    }
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
