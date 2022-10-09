@@ -226,7 +226,6 @@ function getDate(date) {var AddDayCount = arguments.length > 1 && arguments[1] !
       currentCategory: "",
       // 列表
       indexList: [],
-
       // 选中日期
       currentDate: '2022-10-9' };
 
@@ -252,8 +251,8 @@ function getDate(date) {var AddDayCount = arguments.length > 1 && arguments[1] !
 
     },
     change: function change(e) {
-      // console.log("===========");
-      console.log(e.fulldate);
+      this.currentDate = e.fulldate;
+      // console.log(e.fulldate);
 
     },
     checked: function checked(item) {
@@ -287,7 +286,7 @@ function getDate(date) {var AddDayCount = arguments.length > 1 && arguments[1] !
       for (var i = 0; i < this.indexList.length; i++) {
         this.indexList[i]['date'] = this.formatDate(this.indexList[i].date);
       }
-      console.log(this.indexList);
+
     } },
 
   mounted: function mounted() {

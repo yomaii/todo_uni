@@ -13,15 +13,15 @@
 		<view class="list">
 			<view class="title">今日待办:</view>
 			<ul class="listItem">
-				<li v-for="(item, index) in indexList" :key="index"
-				><span  v-show="item.date==currentDate">
-					<!--  -->
-					<view class="checkBox" @click="checked(item)">
-						<span class="circle"
-							:style="{'color':item.finished==true?'#cb2d01':'#ffffff','font-size':item.finished==true?'30rpx':'10rpx'}">√</span>
-					</view>
-					{{item.title}}</span>
-					
+				<li v-for="(item, index) in indexList" :key="index"><span v-show="item.date==currentDate">
+						<!--  -->
+						<view class="checkBox" @click="checked(item)">
+							<span class="circle"
+								:style="{'color':item.finished==true?'#cb2d01':'#ffffff','font-size':item.finished==true?'30rpx':'10rpx'}">√</span>
+						</view>
+						{{item.title}}
+					</span>
+
 				</li>
 			</ul>
 		</view>
@@ -70,10 +70,9 @@
 				current: 0,
 				currentCategory: "",
 				// 列表
-				indexList: [
-				],
+				indexList: [],
 				// 选中日期
-				currentDate:'2022-10-9'
+				currentDate: '2022-10-9'
 
 
 			}
@@ -91,15 +90,15 @@
 		},
 		methods: {
 			// 获取当前日期
-			getCurrentDate(){
-				const r=getDate()
-				this.currentDate=r.fullDate;
-				
+			getCurrentDate() {
+				const r = getDate()
+				this.currentDate = r.fullDate;
+
 			},
 			change(e) {
-				// console.log("===========");
-				console.log(e.fulldate);
-			
+				this.currentDate=e.fulldate
+				// console.log(e.fulldate);
+
 			},
 			checked(item) {
 				let ret = JSON.parse(JSON.stringify(item))
@@ -120,26 +119,26 @@
 				return time;
 			},
 			getInfo() {
-						let _this = this
-						uni.getStorage({
-							key: 'userInfo',
-							success(res) {
-								_this.indexList = res.data
-							}
-						});			
+				let _this = this
+				uni.getStorage({
+					key: 'userInfo',
+					success(res) {
+						_this.indexList = res.data
+					}
+				});
 			},
-			transformDate(){
-				for(let i=0;i<this.indexList.length;i++){
-					this.indexList[i]['date']=this.formatDate(this.indexList[i].date)
+			transformDate() {
+				for (let i = 0; i < this.indexList.length; i++) {
+					this.indexList[i]['date'] = this.formatDate(this.indexList[i].date)
 				}
-				console.log(this.indexList);
+				
 			}
 		},
 		mounted() {
 			this.getCurrentDate()
 			this.getInfo();
 			this.transformDate()
-			
+
 		},
 		filters: {
 			formatDate: function(value) {
@@ -155,7 +154,7 @@
 				var time = date.getFullYear() + "-" + month + "-" + date.getDate();
 				return time;
 			}
-		
+
 		}
 	}
 </script>

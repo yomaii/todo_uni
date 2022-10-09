@@ -154,14 +154,10 @@
 		// 删除
 		deleted(index){
 			this.indexList.splice(index,1)
-			this.updateList()
-			
-			
+			this.updateList()	
 		}
 		},
 		mounted() {
-
-			// console.log("第一个type"+this.list4[0].type)
 		},
 		onLoad() {
 			this.getType()

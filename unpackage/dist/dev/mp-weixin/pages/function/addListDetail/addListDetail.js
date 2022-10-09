@@ -98,9 +98,6 @@ try {
     uniEasyinput: function() {
       return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 185))
     },
-    uniCombox: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-combox/components/uni-combox/uni-combox */ "uni_modules/uni-combox/components/uni-combox/uni-combox").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-combox/components/uni-combox/uni-combox.vue */ 252))
-    },
     uniDatetimePicker: function() {
       return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 259))
     },
@@ -186,6 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -230,40 +228,36 @@ var _default =
           _this.indexList = res.data;
         } });
 
+
     },
     // 获取类别
-    getType: function getType() {
-      var ret = JSON.parse(JSON.stringify(this.indexList));
-      // let arr=[]
-      // console.log(ret[1].type);
-      for (var i = 0; i < ret.length; i++) {
-        var obj = '';
-        // obj.id=ret[i].id
-        obj = ret[i].type;
-        this.candidates[i] = obj;
+    // getType() {
+    // 	let ret = JSON.parse(JSON.stringify(this.indexList))
+    // 	// let arr=[]
+    // 	// console.log(ret[1].type);
+    // 	for (let i = 0; i < ret.length; i++) {
+    // 		let obj = ''
+    // 		// obj.id=ret[i].id
+    // 		obj= ret[i].type
+    // 		this.candidates[i] = obj
 
-      }
-      var len = this.candidates.length;
-      for (var _i = 0; _i < len; _i++) {
-        for (var j = _i + 1; j < len; j++) {
-          if (this.candidates[_i].name == this.candidates[j].name) {
-            this.candidates.splice(j, 1);
-            len--; // 减少循环次数提高性能
-            j--; // 保证j的值自加后不变
-          }
-        }
-      }
-      this.candidates = JSON.parse(JSON.stringify(this.candidates));
-      // console.log(this.candidates);
-    },
+    // 	}
+    // 	let len = this.candidates.length
+    // 	for (let i = 0; i < len; i++) {
+    // 		for (let j = i + 1; j < len; j++) {
+    // 			if (this.candidates[i].name == this.candidates[j].name) {
+    // 				this.candidates.splice(j, 1)
+    // 				len-- // 减少循环次数提高性能
+    // 	   j-- // 保证j的值自加后不变
+    // 			}
+    // 		}
+    // 	}
+    // 	this.candidates = JSON.parse(JSON.stringify(this.candidates))
+    // 	// console.log(this.candidates);
+    // },
 
     addSuccess: function addSuccess() {
-      console.log("===========");
-      console.log(this.value);
-      console.log(this.value1);
-      console.log(this.city);
-      console.log(this.single);
-      console.log("===========");
+
       var obj = {};
       obj.id = this.indexList.length;
       obj.title = this.value;
@@ -272,12 +266,15 @@ var _default =
       obj.repeate = false;
       obj.type = this.city;
       obj.describe = this.value1;
+      console.log(obj);
       this.indexList.push(obj);
+      this.indexList = JSON.parse(this.insexList);
+      uni.setStorageSync('userInfo', this.indexList);
       this.returnLast();
-
+      console.log(this.indexList);
     },
     returnLast: function returnLast() {
-      uni.setStorageSync('userInfo', this.indexList);
+
       uni.navigateBack({
         //uni.navigateTo跳转的返回，默认1为返回上一级
         delta: 1 });
@@ -285,13 +282,16 @@ var _default =
     } },
 
 
+  created: function created() {
+    this.getInfo();
+
+  },
   mounted: function mounted() {var _this2 = this;
     setTimeout(function () {
       _this2.datetimesingle = "2022-10-1";
-      _this2.single = new Date();
+      _this2.single = "2022-10-1";
     }, 1000);
-    this.getInfo();
-    this.getType();
+
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

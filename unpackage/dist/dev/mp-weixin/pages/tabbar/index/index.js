@@ -350,13 +350,9 @@ var listData = __webpack_require__(/*! ../../../data/list.json */ 142);var _defa
     deleted: function deleted(index) {
       this.indexList.splice(index, 1);
       this.updateList();
-
-
     } },
 
   mounted: function mounted() {
-
-    // console.log("第一个type"+this.list4[0].type)
   } }, _defineProperty(_data$onLoad$methods$, "onLoad", function onLoad()
 {
   this.getType();

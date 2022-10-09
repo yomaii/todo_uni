@@ -9,7 +9,8 @@
 		<view class="func">
 			<span>类别：</span>
 			<view class="example-body">
-				<uni-combox :candidates="candidates" placeholder="选择" v-model="city"></uni-combox>
+				<view class="city" ><input v-model="city" type="text"  /></view>
+				<!-- <uni-combox :candidates="candidates" placeholder="选择" v-model="city"></uni-combox> -->
 			</view>
 			<span>日期：</span>
 			<view class="date">
@@ -26,7 +27,7 @@
 	export default {
 		data() {
 			return {
-				indexList:[],
+				indexList: [],
 				// 添加框
 				value: '',
 				value1:'',
@@ -65,41 +66,37 @@
 								success(res) {
 									_this.indexList = res.data
 								}
-							});			
+							});	
+								
 				},
 				// 获取类别
-				getType() {
-					let ret = JSON.parse(JSON.stringify(this.indexList))
-					// let arr=[]
-					// console.log(ret[1].type);
-					for (let i = 0; i < ret.length; i++) {
-						let obj = ''
-						// obj.id=ret[i].id
-						obj= ret[i].type
-						this.candidates[i] = obj
+				// getType() {
+				// 	let ret = JSON.parse(JSON.stringify(this.indexList))
+				// 	// let arr=[]
+				// 	// console.log(ret[1].type);
+				// 	for (let i = 0; i < ret.length; i++) {
+				// 		let obj = ''
+				// 		// obj.id=ret[i].id
+				// 		obj= ret[i].type
+				// 		this.candidates[i] = obj
 				
-					}
-					let len = this.candidates.length
-					for (let i = 0; i < len; i++) {
-						for (let j = i + 1; j < len; j++) {
-							if (this.candidates[i].name == this.candidates[j].name) {
-								this.candidates.splice(j, 1)
-								len-- // 减少循环次数提高性能
-					   j-- // 保证j的值自加后不变
-							}
-						}
-					}
-					this.candidates = JSON.parse(JSON.stringify(this.candidates))
-					// console.log(this.candidates);
-				},
+				// 	}
+				// 	let len = this.candidates.length
+				// 	for (let i = 0; i < len; i++) {
+				// 		for (let j = i + 1; j < len; j++) {
+				// 			if (this.candidates[i].name == this.candidates[j].name) {
+				// 				this.candidates.splice(j, 1)
+				// 				len-- // 减少循环次数提高性能
+				// 	   j-- // 保证j的值自加后不变
+				// 			}
+				// 		}
+				// 	}
+				// 	this.candidates = JSON.parse(JSON.stringify(this.candidates))
+				// 	// console.log(this.candidates);
+				// },
 				
 				addSuccess(){
-					console.log("===========");
-					console.log(this.value);
-					console.log(this.value1);
-					console.log(this.city);
-					console.log(this.single);
-					console.log("===========");
+
 					let obj={}
 					obj.id=this.indexList.length;
 					obj.title=this.value;
@@ -108,26 +105,32 @@
 					obj.repeate=false;
 					obj.type=this.city;
 					obj.describe=this.value1;
+					console.log(obj);
 					this.indexList.push(obj)
+					this.indexList=JSON.parse(this.insexList)
+					uni.setStorageSync('userInfo',this.indexList)
 					this.returnLast()
-					
+					console.log(this.indexList);
 				},
 				returnLast(){
-					uni.setStorageSync('userInfo',this.indexList)
+					
 					uni.navigateBack({ 
 						//uni.navigateTo跳转的返回，默认1为返回上一级
-																	delta: 1
-											});
+						delta:1
+});
 				}
 				
+		},
+		created(){
+			this.getInfo();
+			
 		},
 		mounted() {
 			setTimeout(() => {
 				this.datetimesingle = "2022-10-1";
-				this.single =new Date;
+				this.single = "2022-10-1";
 			}, 1000);
-			this.getInfo();
-			this.getType()
+			
 		},
 		
 		
@@ -142,7 +145,15 @@
 		margin: 20rpx 10rpx;
 		display: inline-block;
 	}
-
+.city {
+	float: right;
+	width: 100rpx;
+	height: 65rpx;
+	margin-top: 8rpx;
+	
+	margin-left: 20rpx;
+	border-radius: 10rpx;
+}
 	.func {
 		// width: 100rpx;
 		height: 80rpx;
