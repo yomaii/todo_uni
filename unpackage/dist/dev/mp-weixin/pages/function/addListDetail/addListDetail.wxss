@@ -32,6 +32,14 @@
   margin: 20rpx 10rpx;
   display: inline-block;
 }
+.city {
+  float: right;
+  width: 100rpx;
+  height: 65rpx;
+  margin-top: 8rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
 .func {
   height: 80rpx;
   display: inline-block;
